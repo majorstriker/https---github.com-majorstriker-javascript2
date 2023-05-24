@@ -18,7 +18,6 @@ productsData.forEach(productData => {
     const productLink = document.createElement('a');
     productLink.classList.add('product__heading');
     productLink.textContent = productData.title;
-    productLink.href = '#';
 
     const productDesc = document.createElement('p');
     productDesc.classList.add('product__text');
@@ -31,7 +30,6 @@ productsData.forEach(productData => {
     const productAdd = document.createElement('a');
     productAdd.classList.add('product__add');
     productAdd.textContent = ' Add to Cart';
-    productAdd.href = '#';
 
     const productAddIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     productAddIcon.setAttribute('width', '27');
@@ -66,4 +64,21 @@ productsData.forEach(productData => {
     productAddIcon.append(pathElement1);
     productAddIcon.append(pathElement2);
     productAddIcon.append(pathElement3);
+});
+
+
+
+const advantagesEl = document.querySelector('.advantages');
+const productAdd = document.querySelector('.product__add');
+
+productAdd.addEventListener('click', function() {
+    const cartDivEl = document.createElement('div');
+    cartDivEl.classList.add('cart__items__div');
+
+    const cardHeaderEl = document.createElement('h1');
+    cardHeaderEl.classList.add('cart__items__div__header');
+    cardHeaderEl.textContent = 'Cart Items';
+
+    advantagesEl.after(cartDivEl);
+    cartDivEl.append(cardHeaderEl);
 });
