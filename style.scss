@@ -476,7 +476,7 @@ a {
             display: flex;
             gap: 32px;
             position: relative;
-            filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+            box-shadow: 17px 19px 24px RGB(0 0 0 / 13%);
             &__info {
                 padding-top: 22px;
                 width: 390px;
@@ -1413,9 +1413,11 @@ button:focus {
 }
 
 .cart__items__div {
+    width: 652px;
     padding-top: 96px;
     padding-bottom: 96px;
     padding-left: 230px;
+    display: none;
     &__header {
         font-family: 'Lato';
         font-style: normal;
@@ -1424,5 +1426,6 @@ button:focus {
         line-height: 36px;
         color: #222222;
         padding-bottom: 64px;
+        text-align: center;
     }
 }
